@@ -1,7 +1,18 @@
+body {
+        overflow-x: hidden;
+        -webkit-overflow-x: hidden;
+        -webkit-overflow-y: hidden;
+        overflow-y: hidden;
+}
+
+.outer {
+    width: 100vw;
+}
+
 .wrapper {
     box-sizing: border-box;
     overflow-y: hidden;
-    width: 300px;
+    width: 100vw;
     height: 95vh;
     margin: 2.5vh auto;
     /*padding: 50px;*/
@@ -9,12 +20,16 @@
     background-color: #EFDCD9;
     /*background-color: red;*/
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #app {
     box-sizing: border-box;
     overflow-y: hidden;
-    max-width: 300px;
+    max-width: 80vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
