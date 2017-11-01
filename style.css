@@ -1,0 +1,250 @@
+.wrapper {
+    box-sizing: border-box;
+    overflow-y: hidden;
+    width: 300px;
+    height: 95vh;
+    margin: 2.5vh auto;
+    /*padding: 50px;*/
+    font-size: 16px;
+    background-color: #EFDCD9;
+    /*background-color: red;*/
+    overflow: hidden;
+}
+
+#app {
+    box-sizing: border-box;
+    overflow-y: hidden;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: none;
+    color: white;
+    background-color: #66B9Bf;
+    font-family: 'Raleway', sans;
+    font-size: 3rem;
+    font-weight: 100;
+    padding: 20px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.dogImage {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: blue;*/
+}
+
+.losange, .losange div {
+  margin: 30px auto 50px auto;
+  background-color: pink;
+  /*transform-origin: 50% 50%;*/
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border: 5px solid white;
+  transform: rotate(45deg) translateY(10px) translateX(10px);
+
+}
+
+.losange .los1 {
+  width: 255px;
+  height: 255px;
+  transform: rotate(-45deg) translateY(-83px);
+}
+.losange .los1 img {
+  width: 100%;
+  height: auto;
+}
+
+.dogImage p {
+    display: none;
+}
+
+.desktopDog1, .desktopDog2 {
+/*    display: none;
+*/}
+
+.main-app {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.city-form {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    margin: 40px 0 40px 0;
+}
+
+.get-weather-button {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    color: white;
+    background-color: #66B9Bf;
+    width: 100%;
+    /*border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;*/
+    border: none;
+    /*height: 4rem;*/
+    outline: 0;
+}
+
+.get-weather-button:active {
+    transform: translate(4px, 4px);
+}
+
+.city-input {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    color: #07889B;
+    background-color: white;
+    text-align: center;
+    padding: 0;
+    width: 100%;/*
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;*/
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    height: 4rem;
+    outline: 0;
+}
+
+.loader {
+	display: none;
+}
+
+.city-weather {
+    font-size: 1rem;
+    text-align: center;
+    color: #07889B;
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+@media only screen and (min-width: 1020px) {
+
+    body {
+        overflow-x: hidden;
+        -webkit-overflow-x: hidden;
+        -webkit-overflow-y: hidden;
+        overflow-y: hidden;
+    }
+    
+    .outer {
+        /*height: 100vh;*/
+        margin: 0;
+        padding: 20px;
+        overflow-x: hidden;
+        -webkit-overflow-x: hidden;
+        -webkit-overflow-y: hidden;
+        overflow-y: hidden;
+        width: 100vw;
+        padding: 0;
+        background: linear-gradient(
+        rgba(255, 182, 193, 1), 
+        rgba(255, 182, 193, 0.5)
+        ),
+        url(imgs/sea-sky-clouds-weather.jpg);
+
+    }
+    .wrapper {
+        height: 100vh;
+        background-color: rgba(255,255,255,0.2);
+    }
+    
+    .body {
+        height: 700px;
+        width: 100vw;
+        padding: 0;
+        background: linear-gradient(
+        rgba(255, 182, 193, 1), 
+        rgba(255, 182, 193, 0.5)
+        ),
+        url(imgs/sea-sky-clouds-weather.jpg);
+        /*background-image: src("imgs/sea-sky-clouds-weather.jpg");*/
+    }
+    
+    /*#app {
+        padding: 0;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .dogImage img {
+        width: 170px;
+    }
+    
+    .dogImage {
+        /*height: auto;
+        padding: 0;
+        justify-content: center;
+        align-items: flex-end;
+       /* display: none;
+    }*/
+    
+    /*.main-app {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .city-form {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .city-input {
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0;
+    }    
+    
+    .get-weather-button {
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 0px;
+    }
+    
+    .city-weather {
+        height: 400px;
+        width: 600px;
+    }
+    
+    .desktopDog2:only-child {
+        border-radius: 100%;
+        display: flex;
+    }
+    
+    
+    
+   
+    
+
+    
+}*/*/
