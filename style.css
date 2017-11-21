@@ -62,13 +62,11 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*background-color: blue;*/
 }
 
 .losange, .losange div {
   margin: 30px auto 50px auto;
   background-color: pink;
-  /*transform-origin: 50% 50%;*/
   overflow: hidden;
   width: 150px;
   height: 150px;
@@ -92,8 +90,7 @@ h1 {
 }
 
 .desktopDog1, .desktopDog2 {
-/*    display: none;
-*/}
+}
 
 .main-app {
     max-width: 80%;
@@ -119,10 +116,7 @@ h1 {
     color: white;
     background-color: #66B9Bf;
     width: 100%;
-    /*border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;*/
     border: none;
-    /*height: 4rem;*/
     outline: 0;
 }
 
@@ -137,9 +131,7 @@ h1 {
     background-color: white;
     text-align: center;
     padding: 0;
-    width: 100%;/*
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;*/
+    width: 100%;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border: none;
@@ -203,67 +195,6 @@ h1 {
         rgba(255, 182, 193, 0.5)
         ),
         url(imgs/sea-sky-clouds-weather.jpg);
-        /*background-image: src("imgs/sea-sky-clouds-weather.jpg");*/
     }
     
-    /*#app {
-        padding: 0;
-    }
-
-    h1 {
-        display: none;
-    }
-
-    .dogImage img {
-        width: 170px;
-    }
-    
-    .dogImage {
-        /*height: auto;
-        padding: 0;
-        justify-content: center;
-        align-items: flex-end;
-       /* display: none;
-    }*/
-    
-    /*.main-app {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .city-form {
-        flex-direction: column;
-        margin-top: 0;
-    }
-
-    .city-input {
-        border-bottom-left-radius: 0px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 0;
-    }    
-    
-    .get-weather-button {
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 0px;
-    }
-    
-    .city-weather {
-        height: 400px;
-        width: 600px;
-    }
-    
-    .desktopDog2:only-child {
-        border-radius: 100%;
-        display: flex;
-    }
-    
-    
-    
-   
-    
-
-    
-}*/*/
+   }
