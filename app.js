@@ -1,17 +1,17 @@
-(function() { //IIFE - immediately invoked function expression
+(function () { //IIFE - immediately invoked function expression
 
 var DARKSKY_API_URL = 'https://api.darksky.net/forecast/';
 var DARKSKY_API_KEY = '5569899de6bc3c670e5334c59678b336';
 var CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
 
-var GOOGLE_MAPS_API_KEY = 'AIzaSyCxjoOb9iDK0AcSLqGocYGAF24LbKKnVYg';
+// var GOOGLE_MAPS_API_KEY = 'AIzaSyCxjoOb9iDK0AcSLqGocYGAF24LbKKnVYg';
+var GOOGLE_MAPS_API_KEY = 'AIzaSyA4otksOpRU_E_NsrptRPHJyEtNAKsiweE';
 var GOOGLE_MAPS_API_URL = 'https://maps.googleapis.com/maps/api/geocode/json';
 
 // This function returns a promise that will resolve with an object of lat/lng coordinates
 function getCoordinatesForCity(cityName) {
   // This is an ES6 template string, much better than verbose string concatenation...
-  var url = `${GOOGLE_MAPS_API_URL}?address=${cityName}&key=${GOOGLE_MAPS_API_KEY}`;
-
+  var url = `${GOOGLE_MAPS_API_URL}?address=${cityName}&key=${GOOGLE_MAPS_API_KEY}&libraries=places`;
   return (
     fetch(url) // Returns a promise for a Response
     .then(response => response.json()) // Returns a promise for the parsed JSON
@@ -43,21 +43,22 @@ cityForm.addEventListener('submit', function(event) { // this line changes
   var city = cityInput.value;
 //icons
 
-
-
-
-
-
   getCoordinatesForCity(city)
   
 
   .then(getCurrentWeather)
   .then(function(weather) {
     cityWeather.innerText = 'Woof! ' + weather.summary +  ' today. Grr.' + "\n"
-    + 'The temperature is ' + weather.temperature + ',' + "\n"
+    + 'The temperature in ' + city + ' is ' + weather.temperature + ',' + "\n"
     + 'and it feels like ' + weather.apparentTemperature + '.' + "\n" + "\n"
     + 'Are you still gonna walk me?' + "\uD83D\uDC36";
   });
   
 });
 }) ();
+
+// this is for autocomplete
+function activatePlacesSearch() {
+	var input = document.getElementById('input');
+	var autocomplete = new google.maps.places.Autocomplete(input);
+};
