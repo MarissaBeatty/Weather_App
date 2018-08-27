@@ -55,6 +55,7 @@ cityForm.addEventListener('submit', function(event) { // this line changes
     + 'The temperature in ' + city + ' is ' + weather.temperature + ',' + "\n"
     + 'and it feels like ' + weather.apparentTemperature + '.' + "\n" + "\n"
     + 'Are you still gonna walk me?' + "\uD83D\uDC36";
+    cityWeather.style.padding = "20px";
   }).then(function(){
     loadingMessage.classList.remove('active');
   });

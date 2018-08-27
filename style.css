@@ -7,8 +7,8 @@ body {
     margin: 0;
     overflow-x: hidden;
     -webkit-overflow-x: hidden;
-    -webkit-overflow-y: hidden;
-    overflow-y: hidden;
+    -webkit-overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 .outer {
@@ -33,14 +33,11 @@ body {
 #app {
     box-sizing: border-box;
     overflow-y: hidden;
-    /*max-width: 80vw;*/
+    max-width: 80vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: red;
-    width: 100vw;
-    /*height: 70vh;*/
 }
 
 h1 {
@@ -138,13 +135,10 @@ h1 {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border: none;
-    height: 7rem;
     outline: 0;
 }
 
 .loader {
-	/*display: none;*/
-    /*height: 0;*/
     margin-top: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
@@ -159,10 +153,10 @@ h1 {
 }
 
 .city-weather {
-    font-size: 5rem;
+    font-size: 2.3rem;
     text-align: center;
     color: #07889B;
-    width: 100%;
+    width: 80%;
     max-height: 100%;
     display: flex;
     justify-content: center;
@@ -228,7 +222,6 @@ h1 {
     }
     
     .body {
-        height: 700px;
         width: 100vw;
         padding: 0;
         background: linear-gradient(
@@ -236,6 +229,39 @@ h1 {
         rgba(255, 182, 193, 0.5)
         ),
         url(imgs/sea-sky-clouds-weather.jpg);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    #app {
+        height: auto;
+        max-height: unset;
+        padding: 0;
+    }
+
+    .city-input {
+        font-size: 2rem;
+    }
+
+    .get-weather-button  {
+        font-size: 2rem;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .city-weather {
+        font-size: 1rem;
+        max-height: 300px;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .loader {
+        font-size: 2rem;
     }
     
    }
