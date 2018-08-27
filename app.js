@@ -34,14 +34,17 @@ var app = document.querySelector('#app');
 var cityForm = app.querySelector('.city-form');
 var cityInput = cityForm.querySelector('.city-input');
 var cityWeather = app.querySelector('.city-weather');
-//var loadingMessage = app.querySelector('.loader');
+var loadingMessage = app.querySelector('.loader');
 
 cityForm.addEventListener('submit', function(event) { // this line changes
   event.preventDefault(); // prevent the form from submitting
 
+  // display the loader
+  loadingMessage.classList.add('active');
+
   // This code doesn't change!
   var city = cityInput.value;
-//icons
+  //icons
 
   getCoordinatesForCity(city)
   
@@ -52,8 +55,9 @@ cityForm.addEventListener('submit', function(event) { // this line changes
     + 'The temperature in ' + city + ' is ' + weather.temperature + ',' + "\n"
     + 'and it feels like ' + weather.apparentTemperature + '.' + "\n" + "\n"
     + 'Are you still gonna walk me?' + "\uD83D\uDC36";
+  }).then(function(){
+    loadingMessage.classList.remove('active');
   });
-  
 });
 }) ();
 
