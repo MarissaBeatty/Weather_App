@@ -59,6 +59,7 @@ cityForm.addEventListener('submit', function(event) { // this line changes
 
 // this is for autocomplete
 function activatePlacesSearch() {
+	console.log("test");
 	var input = document.getElementById('input');
 	var autocomplete = new google.maps.places.Autocomplete(input);
 };
