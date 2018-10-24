@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     overflow-x: hidden;
     -webkit-overflow-x: hidden;
@@ -18,9 +18,8 @@ body {
 
 .wrapper {
     box-sizing: border-box;
-    overflow-y: hidden;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     font-size: 16px;
     background-color: #EFDCD9;
     overflow: hidden;
@@ -34,6 +33,8 @@ body {
     box-sizing: border-box;
     overflow-y: hidden;
     max-width: 80vw;
+    max-height: 80vh;
+    min-height: 890px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,7 +113,7 @@ h1 {
 
 .get-weather-button {
     font-family: 'Raleway', sans-serif;
-    font-size: 7rem;
+    font-size: 4rem;
     color: white;
     background-color: #66B9Bf;
     width: 100%;
@@ -126,7 +127,7 @@ h1 {
 
 .city-input {
     font-family: 'Raleway', sans-serif;
-    font-size: 7rem;
+    font-size: 4rem;
     color: #07889B;
     background-color: white;
     text-align: center;
@@ -232,13 +233,14 @@ h1 {
     }
 
     h1 {
+        display: block;
         font-size: 3rem;
     }
 
     #app {
         height: auto;
         max-height: unset;
-        padding: 0;
+        padding: 0 0 100px 0;
     }
 
     .city-input {
