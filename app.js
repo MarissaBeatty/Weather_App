@@ -48,7 +48,6 @@ cityForm.addEventListener('submit', function(event) { // this line changes
 
   getCoordinatesForCity(city)
   
-
   .then(getCurrentWeather)
   .then(function(weather) {
     cityWeather.innerText = 'Woof! ' + weather.summary +  ' today. Grr.' + "\n"
